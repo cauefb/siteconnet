@@ -1,5 +1,5 @@
 import s from "../Style.module.scss" 
-import InfoCard from "../../components/infoCard/infoCard"
+import InfoCard from "../../components/infoCard/InfoCard"
 import Reciclagem from "../../assets/imagens/reciclagem.png";
 import aulasTech from "../../assets/imagens/aulasTech.png";
 import Esporte from "../../assets/imagens/esporte.png";
