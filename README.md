@@ -1,16 +1,88 @@
-# React + Vite
+# SiteConnect (siteconnet)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação front-end em **React + Vite** com páginas voltadas a **conectar empresas e pessoas a projetos sociais**, com navegação via **React Router** e componentes reutilizáveis para cards de ações (doação, voluntariado, mentoria e eventos).
 
-Currently, two official plugins are available:
+## Deploy na vercel
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+https://siteconnet-git-main-cauefbs-projects.vercel.app/
 
-## React Compiler
+## ✨ Visão geral
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O projeto apresenta:
 
-## Expanding the ESLint configuration
+- **Página inicial** com chamada para “Cadastrar Empresa” e indicadores de impacto
+- Páginas temáticas com **cards informativos** para:
+  - Doação
+  - Voluntariado
+  - Mentoria
+  - Eventos & Palestras
+- Página de **perfil do usuário**
+- Layout base com **Header** (menu responsivo) e **Footer**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+A cada clique nos botões dos cards, é exibido um **toast de sucesso** usando **SweetAlert2**. :contentReference[oaicite:0]{index=0}
+
+---
+
+## 🧰 Tecnologias
+
+- **React** :contentReference[oaicite:1]{index=1}
+- **Vite** :contentReference[oaicite:2]{index=2}
+- **React Router DOM** (rotas) :contentReference[oaicite:3]{index=3}
+- **Sass (SCSS Modules)** :contentReference[oaicite:4]{index=4}
+- **SweetAlert2** (toast/alertas) :contentReference[oaicite:5]{index=5}
+- **React Icons** :contentReference[oaicite:6]{index=6}
+
+---
+
+## 🗺️ Rotas da aplicação
+
+As rotas estão definidas em `src/App.jsx`: :contentReference[oaicite:7]{index=7}
+
+| Rota            | Página              |
+| --------------- | ------------------- |
+| `/`             | Página Inicial      |
+| `/doacao`       | Doação              |
+| `/voluntariado` | Voluntariado        |
+| `/mentoria`     | Mentoria            |
+| `/eventosEP`    | Eventos & Palestras |
+| `/usuario`      | Perfil do Usuário   |
+
+---
+
+## 🧩 Componentes principais
+
+### `Header`
+
+- Logo com link para home
+- Menu com links (desktop)
+- Menu “do usuário” (abre/fecha) clicando no avatar
+- Comportamento responsivo via `resize` e controle de `isMobile` :contentReference[oaicite:8]{index=8}
+
+### `InfoCard`
+
+Componente reutilizável que recebe props (`img`, `alt`, `subtitulo`, `paragrafo`, `segParagrafo`, `textBotao`) e dispara um toast de sucesso ao clicar no botão. :contentReference[oaicite:9]{index=9}
+
+---
+
+## 🚀 Como rodar o projeto localmente
+
+### Pré-requisitos
+
+- Node.js (recomendado: versão LTS)
+- npm (ou yarn/pnpm)
+
+### Instalação
+
+```bash
+# 1) Clone o repositório
+git clone https://github.com/cauefb/siteconnet.git
+
+# 2) Entre na pasta
+cd siteconnet
+
+# 3) Instale as dependências
+npm install
+
+# 4) Rode o comando
+npm run dev
+```
