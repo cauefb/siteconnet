@@ -4,7 +4,7 @@ Aplicação front-end em **React + Vite** com páginas voltadas a **conectar emp
 
 ## Deploy na vercel
 
-https://siteconnet-git-main-cauefbs-projects.vercel.app/
+https://siteconnet.vercel.app/
 
 ## ✨ Visão geral
 
